@@ -1,0 +1,47 @@
+<a href="#" class="has-loader">RESEND CODE</a>
+
+a {
+  display: inline-block;
+  padding: 15px 0;
+  margin: 100px;
+  color: black;
+  text-decoration: none;
+}
+
+a.has-loader {
+  position: relative;
+  
+  &:after,
+  &:before{
+    content: '';
+    border-radius: 4px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+  &:before {
+    border: 1px solid #DDD;
+    padding: 2px;
+    background: #FFF;
+  }
+  
+  &:after {
+    background: #000;
+    bottom: 1px;
+    padding: 2px;
+    animation-name: reset-button-loader;
+    animation-duration: 30s;
+  }
+}
+
+@keyframes reset-button-loader {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
